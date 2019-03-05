@@ -90,5 +90,82 @@ describe("helpers library", () => {
       expect(getRemainder(50, 3)).toBe(2);
     });
   });
-  describe(".isEven() method", () => {});
+  describe(".isEven() method", () => {
+    it("takes in a number and returns true if even and false if odd", () => {
+      expect(isEven(100)).toBe(true);
+      expect(isEven(99)).toBe(false);
+    });
+  });
+  describe(".isOdd() method", () => {
+    it("takes in a number and returns true if odd and false if even", () => {
+      expect(isOdd(100)).toBe(false);
+      expect(isOdd(99)).toBe(true);
+    });
+  });
+  describe(".square() method", () => {
+    it("takes in a number and returns its square", () => {
+      expect(square(4)).toBe(16);
+      expect(square(10)).toBe(100);
+    });
+  });
+  describe(".cube() method", () => {
+    it("takes in a number and returns its cube", () => {
+      expect(cube(5)).toBe(125);
+      expect(cube(10)).toBe(1000);
+      expect(cube(2)).toBe(8);
+    });
+  });
+  describe(".raiseToPower()", () => {
+    it("takes in a number and exponent and raises the number to the poewr of the exponent", () => {
+      expect(raiseToPower(2, 2)).toBe(4);
+      expect(raiseToPower(5, 3)).toBe(125);
+    });
+  });
+  describe(".roundNumber() method", () => {
+    it("rounds down any floating point number input into it", () => {
+      expect(roundNumber(99.9)).toBe(100);
+      expect(roundNumber(59.791)).toBe(60);
+    });
+  });
+  describe(".roundUp() method", () => {
+    it("rounds up any floating point number put into it", () => {
+      expect(roundUp(4.11111)).toBe(5);
+    });
+  });
+  describe(".addExclamationPoint() method", () => {
+    it("takes in a string and returns it with an exclamation point on the end", () => {
+      expect(addExclamationPoint("Dude")).toBe("Dude!");
+    });
+  });
+  describe(".combineNames() method", () => {
+    it("take in two string names and concatenates them together", () => {
+      expect(combineNames("Nathan", "Thomas")).toBe("Nathan Thomas");
+    });
+  });
+  describe(".getGreeting() method", () => {
+    it("takes in a string name and returns in a greeting", () => {
+      expect(getGreeting("Nathan")).toBe("Hello Nathan!");
+    });
+  });
+  describe(".getRectangleArea() method", () => {
+    it("takes in a length and width and returns the area of a rectangle", () => {
+      expect(getRectangleArea(10, 3)).toBe(30);
+      expect(getRectangleArea(50, 2)).toBe(100);
+    });
+  });
+  describe(".getTriangleArea() method", () => {
+    it("takes in a base and a height and returns the triangle's area", () => {
+      expect(getTriangleArea(20, 10)).toBe(100);
+    });
+  });
+  describe(".getCircleArea() method", () => {
+    it("takes in a radius and returns the circle's circumference", () => {
+      expect(getCircleArea(10)).toBe(314.1592653589793);
+    });
+  });
+  describe(".getRectangularPrismVolume", () => {
+    it("takes in a length, width, and height, and returns the volume of a prism", () => {
+      expect(getRectangularPrismVolume(10, 10, 10)).toBe(1000);
+    });
+  });
 });
