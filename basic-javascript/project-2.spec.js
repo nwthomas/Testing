@@ -90,4 +90,35 @@ describe("funcs library", () => {
       expect(addItemToFront([6, 3, 5, 10], 10)).toEqual([10, 6, 3, 5, 10]);
     });
   });
+  describe(".wordsToSentence() method", () => {
+    it("should convert an array of words into a sentence", () => {
+      expect(wordsToSentence(["Dude", "this", "is", "crazy", "cool"])).toBe(
+        "Dude this is crazy cool"
+      );
+    });
+  });
+  describe(".contains() method", () => {
+    it("should return true if an array contains an item and false otherwise", () => {
+      expect(contains(["Dude", "this", "is", "crazy", "cool"], "Dude")).toBe(
+        true
+      );
+    });
+  });
+  describe(".addNumber() method", () => {
+    it("should return true if an array contains an item and false otherwise", () => {
+      expect(contains(["Dude", "this", "is", "crazy", "cool"], "Dude")).toBe(
+        true
+      );
+    });
+  });
+  describe(".averageTestScore() methods", () => {
+    it("should return the average of all test scores in an array", () => {
+      expect(averageTestScore([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(5);
+    });
+  });
+  describe("largestNumber() method", () => {
+    it("should return the largest number in an array", () => {
+      expect(largestNumber([4, 1, 4, 19, 33, 23, 5])).toBe(33);
+    });
+  });
 });
